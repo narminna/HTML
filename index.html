@@ -1,10 +1,110 @@
-<!DOCTYPE html><!--//html5 documet/doctype declaration-->
-<html><!--container for all other HTML elements-->
-    <head>
-      <title>My first Web page</title>
-    </head>
-    <body>
-        <img src="images/Image.jpg">
-        <p>First HTML web page</p>
-    </body>
+<!DOCTYPE html><!-- HTML5 document type declaration -->
+<html><!-- Container for all other HTML elements -->
+<head>
+  <title>My first Web page</title>
+  <style>
+    .content-container {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
+  <script>
+    function changeTxtDirection() {
+      var bdo = document.querySelector("bdo");
+      if (bdo.getAttribute("dir") === "rtl") {
+        bdo.setAttribute("dir", "ltr");
+      } else {
+        bdoElement.setAttribute("dir", "rtl");
+      }
+    }
+  </script>
+</head>
+<body>
+    <h2>Forest</h2>
+    <p>
+        First HTML web page
+        <a href="https://github.com/narminna/HTML">HW Link</a>
+    </p>
+    <img src="images/img.webp" alt="Habitat" usemap="#habitat" width="1250" height="450">
+    <map name="habitat">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    </map>
+    
+    <p>acronym was supported in <abbr title="HyperText Markup Language">HTML4</abbr></p><!-- Changed acronym to abbr -->
+    <p>CA stands for <abbr title="Code Academy">CA</abbr></p>
+    <address>
+        This was written by <a href="mailto:narminna@code.edu.az">Narmin Akbarova</a><!-- Changed gmail to mailto -->
+    </address>
+    <h1><b>Intro</b></h1>
+    <p><bdi><dfn>Crime</dfn> is a serious and growing problem in most societies. Although many people believe that the best way to tackle this is to place people in prison for longer periods, others are of the opinion that other measures will be more effective.</bdi></p>
+    <aside>
+        <h3><i><u>Hook</u></i></h3>
+      <p><bdo dir="rtl">There are benefits of giving offenders longer prison sentences. Firstly, spending a long time in prison provides an opportunity for the prison services to rehabilitate a prisoner. For example, someone who has committed a serious offence such as assault will need a long time in prison in order to be sure they can be re-educated not to re-offend.</bdo></p>
+    </aside>
+    <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+    <base href="https://www.w3schools.com/" target="_blank">
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+        </blockquote>
+    <button onclick="changeTxtDirection()">Change text direction</button>
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "blue";
+      ctx.fillRect(160, 50, 80, 90);
+    </script>
+    <div class="content-container">
+      <h3>Monthly Savings</h3>
+      <table>
+        <caption>Monthly savings</caption>
+        <colgroup>
+          <col style="background-color: lightblue;">
+          <col style="background-color: lightgreen;">
+        </colgroup>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+        <tr>
+          <td>January</td>
+          <td>$100</td>
+        </tr>
+      </table>
+      <p>The HTML <code>button</code> tag <del>defnes</del> <ins>defines</ins> a clickable button.</p>
+      <dl>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+      </dl>
+      <details>
+        <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+      </details>
+    </div>
+
+    <label for="browser">Choose a browser from this list:</label>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Firefox">
+      <option value="Microsoft Edge">
+      <option value="Safari">
+    </datalist>
+    <dialog open>This is an <em>open</em> dialog window</dialog>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+      </dl> 
+      <hr>
+      <footer>
+        <p>This is the footer</p>
+      </footer>
+</body>
 </html>
